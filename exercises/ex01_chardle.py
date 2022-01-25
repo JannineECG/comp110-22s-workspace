@@ -16,8 +16,9 @@ print("Searching for " + char_1 + " in " + special_word)
 
 count: int = 0
 
-if special_word == int(4 < 5):
+if len(special_word) != (5):
     print("Error: word must contain 5 characters")
+    exit()
 
 if char_1 == special_word[0]:
     print(char_1 + " found at index 0")
