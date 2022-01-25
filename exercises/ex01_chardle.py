@@ -44,6 +44,6 @@ if count == 2:
 if count == 3:
     print("3 instance of " + char_1 + " found in " + special_word)
 if count == 4:
-    print("3 instance of " + char_1 + " found in " + special_word)
+    print("4 instance of " + char_1 + " found in " + special_word)
 if count == 5:
     print("5 instance of " + char_1 + " found in " + special_word)
