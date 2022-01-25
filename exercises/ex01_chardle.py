@@ -7,7 +7,7 @@ if len(special_word) != 5:
     print("Error: word muct contain 5 characters")
     exit()
 
-char_1: str = input("Enter a single character:")
+char_1: str = input("Enter a single character: ")
 if len(char_1) != 1:
     print("Error: Character must be a single character.")
     exit()
@@ -40,10 +40,10 @@ if count == 0:
 if count == 1:
     print("1 instance of " + char_1 + " found in " + special_word)
 if count == 2:
-    print("2 instance of " + char_1 + " found in " + special_word)
+    print("2 instances of " + char_1 + " found in " + special_word)
 if count == 3:
-    print("3 instance of " + char_1 + " found in " + special_word)
+    print("3 instances of " + char_1 + " found in " + special_word)
 if count == 4:
-    print("4 instance of " + char_1 + " found in " + special_word)
+    print("4 instances of " + char_1 + " found in " + special_word)
 if count == 5:
-    print("5 instance of " + char_1 + " found in " + special_word)
+    print("5 instances of " + char_1 + " found in " + special_word)
