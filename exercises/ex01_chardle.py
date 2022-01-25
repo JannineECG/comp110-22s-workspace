@@ -38,12 +38,12 @@ if char_1 == special_word[4]:
 if count == 0:
     print("No instances of " + char_1 + " found in " + special_word)
 if count == 1:
-    print("1 instances of " + char_1 + " found in " + special_word)
+    print("1 instance of " + char_1 + " found in " + special_word)
 if count == 2:
-    print("2 instances of " + char_1 + " found in " + special_word)
+    print("2 instance of " + char_1 + " found in " + special_word)
 if count == 3:
-    print("3 instances of " + char_1 + " found in " + special_word)
+    print("3 instance of " + char_1 + " found in " + special_word)
 if count == 4:
-    print("3 instances of " + char_1 + " found in " + special_word)
+    print("3 instance of " + char_1 + " found in " + special_word)
 if count == 5:
-    print("5 instances of " + char_1 + " found in " + special_word)
+    print("5 instance of " + char_1 + " found in " + special_word)
