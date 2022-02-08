@@ -60,7 +60,7 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 1
     secret: str = "codes"
-    counter = 1
+    counter = 0
     while turns <= 6:
         print(f"=== Turn {turns}/6 ===")
         state: str = input_guess(len(secret))
