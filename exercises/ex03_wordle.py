@@ -51,22 +51,17 @@ def main() -> None:
     turns: int = 1
     secret: str = "codes"
     counter = 1
-    print(f"=== Turn {turns}/6 ===")
-    state: str = input_guess(len(secret))
-    while turns <= 6 and state != secret:
-        if turns <= 6:
-            print(emojified(state, secret))
-            print(f"=== Turn {turns}/6 ===")
-            state: str = input_guess(len(secret))
-            turns = turns + 1
-    else:
-        if state == secret and turns <= 6:
-            print(emojified(state, secret))
+    while turns <= 6:
+        print(f"=== Turn {turns}/6 ===")
+        state: str = input_guess(len(secret))
+        print(emojified(state, secret))
+        turns = turns + 1
+        if state == secret:
             print("You won in " + str(counter + 1) + "/6 turns!")
-            
-    if turns > 6:
+            exit()
+    else:
         print("X/6 - Sorry, try again tomorrow!")
-
+            
 
 if __name__ == "__main__":
     main()
