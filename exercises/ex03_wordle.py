@@ -41,10 +41,9 @@ def input_guess(many: int) -> str:
     """Right characters."""
     guess: str = str(input(f"Enter a {many} character word:"))
     while len(guess) != many:
-        guess = input(f"That wasn't {many} chars! Try again:")
-    if len(guess) == many:
-        print(guess)
-    return guess
+        guess = str(input(f"That wasn't {many} chars! Try again:"))
+    else:
+        return guess
 
 
 def main() -> None:
@@ -52,15 +51,21 @@ def main() -> None:
     turns: int = 1
     secret: str = "codes"
     counter = 1
-    while turns <= 6:
-        print(f"=== Turn {turns}/6 ===")
-        state: str = input_guess(len(secret))
-        print(emojified(state, secret))
-        turns = turns + 1
-        if state == secret:
+    print(f"=== Turn {turns}/6 ===")
+    state: str = input_guess(len(secret))
+    while turns <= 6 and state != secret:
+        if turns <= 6:
+            print(emojified(state, secret))
+            print(f"=== Turn {turns}/6 ===")
+            state: str = input_guess(len(secret))
+            turns = turns + 1
+    else:
+        if state == secret and turns <= 6:
+            print(emojified(state, secret))
             print("You won in " + str(counter + 1) + "/6 turns!")
-            exit()
-    print("X/6 - Sorry, try again tomorrow!")
+            
+    if turns > 6:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":
