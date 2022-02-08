@@ -58,7 +58,6 @@ def main() -> None:
         turns = turns + 1
         if state == secret:
             print("You won in " + str(counter + 1) + "/6 turns!") 
-            quit() 
     else:
         print("X/6 - Sorry, try again tomorrow!")
             
