@@ -23,26 +23,17 @@ def emojified(guess: str, secret: str) -> str:
     white_box: str = "\U00002B1C"
     green_box: str = "\U0001F7E9"
     yellow_box: str = "\U0001F7E8"
-    depends: bool = False
-    here: int = 0
-    check: int = 0
+    where: int = 0
     line: str = ""
-    while here < len(secret):
-        if guess[here] == secret[here]:
+    while where < len(secret):
+        if guess[where] == secret[where]:
             line = line + green_box
         else:
-            while not depends and check < len(secret):
-                if secret[check] == guess[depends]:
-                    depends = True 
-                else:
-                    check = check + 1 
-            if depends: 
+            if contains_char(secret, guess[where]):
                 line = line + yellow_box
             else:
-                line = line + white_box
-        here = here + 1
-        check = 0
-        depends = False
+                line = line + white_box 
+        where = where + 1
     return line
 
 
@@ -60,7 +51,7 @@ def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 1
     secret: str = "codes"
-    counter = 0
+    counter = 1
     while turns <= 6:
         print(f"=== Turn {turns}/6 ===")
         state: str = input_guess(len(secret))
