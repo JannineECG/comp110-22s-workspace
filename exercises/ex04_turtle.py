@@ -2,7 +2,7 @@
 
 __author__ = "730470181"
 
-from turtle import Turtle, colormode, done 
+from turtle import Turtle, colormode, tracer, update, done 
 
 colormode(255)
 
@@ -10,7 +10,9 @@ colormode(255)
 def main() -> None:
     """The entrypoint of my scene."""
     flower: Turtle = Turtle()
+    colormode(255)
     flower.speed(0)
+    tracer(0, 0)
     draw_petal(flower, -50, 10, 100)
     draw_petal(flower, -60, -10, 120)
     draw_core(flower, -85, 50, 170)
@@ -25,6 +27,7 @@ def main() -> None:
     draw_stem(flower, -20, -10, 50, 300)
     draw_leaf(flower, 30, -100, 100)
     draw_leaf(flower, 15, -250, 100)
+    update()
     done()
 
 
@@ -37,8 +40,8 @@ def draw_petal(a_petal: Turtle, x: float, y: float, width: float) -> None:
     i: int = 0
     while i < 8:
         a_petal.begin_fill()
-        a_petal.pencolor('pink')
-        a_petal.fillcolor('pink')
+        a_petal.pencolor('red')
+        a_petal.fillcolor('red')
         a_petal.forward(width)
         a_petal.left(45)
         i += 1
@@ -54,8 +57,8 @@ def draw_core(a_core: Turtle, x: float, y: float, width: float) -> None:
     i: int = 0
     while i < 4:
         a_core.begin_fill()
-        a_core.pencolor('yellow')
-        a_core.fillcolor('yellow')
+        a_core.pencolor('brown')
+        a_core.fillcolor('brown')
         a_core.forward(width)
         a_core.left(90)
         a_core.end_fill()
