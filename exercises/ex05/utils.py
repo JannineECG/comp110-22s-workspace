@@ -17,6 +17,8 @@ def only_evens(lis: list[int]) -> list[int]:
 def sub(a_list: list[int], start: int, end: int) -> list[int]:
     """Given a list of number, varying the."""
     lis: list[int] = list()
+    if len(a_list) == 0:
+        return []
     if start < 0:
         start = 0
     if end > len(a_list): 
@@ -26,7 +28,7 @@ def sub(a_list: list[int], start: int, end: int) -> list[int]:
         start += 1
     if len(a_list) == 0:
         start > len(a_list) or end <= 0
-        lis.append(a_list[start])
+        lis.append(a_list[end])
     return lis
 
 
