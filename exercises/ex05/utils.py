@@ -35,5 +35,12 @@ def sub(a_list: list[int], start: int, end: int) -> list[int]:
 def concat(first: list[int], second: list[int]) -> list[int]:
     """Two list of integers combined."""
     done: list[int] = list()
-    done = first + second 
+    i: int = 0
+    x: int = 0
+    while i < len(first):
+        done.append(first[i])
+        i += 1
+    while x < len(second):
+        done.append(second[x])
+        x += 1
     return done
