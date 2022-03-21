@@ -40,7 +40,7 @@ def head(cols: dict[str, list[str]], N: int) -> dict[str, list[str]]:
     for key in cols:
         xs: list[str] = []
         i: int = 0
-        while i < N:
+        while i <= N:
             xs.append(cols[key][i])
             i += 1
         end[key] = xs
@@ -62,7 +62,7 @@ def concat(col_1: dict[str, list[str]], col_2: dict[str, list[str]]) -> dict[str
         end[key] = col_1[key]
     for key in col_2:
         if col_2 in end[key]:
-            col_2 += end
+            col_2[key] += end
         else:
             end[key] = col_2[key]
     return end
