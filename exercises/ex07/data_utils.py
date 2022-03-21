@@ -22,7 +22,6 @@ def column_values(table: list[dict[str, str]], column: str) -> list[str]:
     for row in table: 
         item: str = row[column]
         end.append(item)
-
     return end
 
 
@@ -32,7 +31,6 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
     first_row: dict[str, str] = row_table[0]
     for column in first_row:
         result[column] = column_values(row_table, column)
-
     return result
 
 
@@ -74,8 +72,8 @@ def count(fre: list[str]) -> dict[str, int]:
     """The sex and race of all the people stopped."""
     end: dict[str, int] = {}
     for key in fre:
-        if key not in end:
-            end[key] = 1
-        else:
+        if key in end:
             end[key] += 1
+        else:
+            end[key] = 1
     return end
