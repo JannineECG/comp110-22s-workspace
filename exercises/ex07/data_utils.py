@@ -62,7 +62,7 @@ def concat(col_1: dict[str, list[str]], col_2: dict[str, list[str]]) -> dict[str
         end[key] = col_1[key]
     for key in col_2:
         if col_2 in end[key]:
-            col_2[key] += end
+            col_2 += end
         else:
             end[key] = col_2[key]
     return end
