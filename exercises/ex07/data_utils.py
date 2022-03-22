@@ -43,7 +43,7 @@ def head(cols: dict[str, list[str]], N: int) -> dict[str, list[str]]:
         while i < N:
             if len(cols[key]) > i:
                 xs.append(cols[key][i])
-                i += 1
+            i += 1
         end[key] = xs
     return end
 
